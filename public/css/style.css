@@ -1,0 +1,273 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+/* =========================
+   ROOT
+========================= */
+:root {
+    --primary: #1e293b;
+    --accent: #6366f1;
+
+    --bg: #f8fafc;
+    --card: #ffffff;
+
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+
+    --success: #10b981;
+    --warning: #f59e0b;
+    --info: #3b82f6;
+
+    --shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid-cols-3 {
+    grid-template-columns: 1fr 2fr;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================
+   FORM
+========================= */
+.form-label {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fff;
+    transition: 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(99,102,241,0.15);
+    outline: none;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+    padding: 0.7rem 1.3rem;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #4f46e5;
+}
+
+/* =========================
+   BADGE (STATUS)
+========================= */
+.badge {
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.badge.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge.processing {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.badge.resolved {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+/* =========================
+   COMPLAINT CARD
+========================= */
+.complaint-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    transition: 0.2s;
+}
+
+.complaint-card:hover {
+    background: #f9fafb;
+}
+
+.complaint-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.complaint-date {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.complaint-desc {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.complaint-img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   RESPONSE
+========================= */
+.response-box {
+    background: #f1f5f9;
+    border-left: 4px solid var(--accent);
+    padding: 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+/* =========================
+   TABLE
+========================= */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f1f5f9;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+th, td {
+    padding: 0.9rem;
+    border-bottom: 1px solid var(--border);
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+.empty-state {
+    text-align: center;
+    padding: 2.5rem;
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+}
+
+/* =========================
+   AUTH
+========================= */
+.auth-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .grid-cols-3,
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+}
